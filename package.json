@@ -1,9 +1,9 @@
 {
-  "name": "angular-example",
+  "name": "angular-seed",
   "private": true,
   "version": "0.0.0",
-  "description": "Angular start project",
-  "repository": "https://github.com/colepalm/angular-example",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
