@@ -1,13 +1,13 @@
 # Football News Display
 
-### To run locally -
+#### To run locally -
 
-### git clone https://github.com/colepalm/nfl-news-angular.git nfl-news-display
+#### git clone https://github.com/colepalm/nfl-news-angular.git nfl-news-display
 
-### cd nfl-news-display
+#### cd nfl-news-display
 
-### npm install
+#### npm install
 
-### npm start
+#### npm start
 
-### in your browser, navigate to localhost:8000/app
+#### in your browser, navigate to localhost:8000/app
