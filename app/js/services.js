@@ -1,4 +1,4 @@
-angular.module('F1FeederApp.services', [])
+angular.module('nflNewsApp.services', [])
     .factory('ergastAPIservice', function($http) {
 
         var ergastAPI = {};

@@ -1,4 +1,4 @@
-angular.module('F1FeederApp.controllers', []).
+angular.module('nflNewsApp.controllers', []).
 
 /* Drivers controller */
 controller('driversController', function($scope, ergastAPIservice) {
