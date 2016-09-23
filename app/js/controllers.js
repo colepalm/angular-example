@@ -1,22 +1,23 @@
 angular.module('nflNewsApp.controllers', []).
 
-/* Drivers controller */
-controller('driversController', function($scope, ergastAPIservice) {
-    $scope.nameFilter = null;
-    $scope.driversList = [];
-    $scope.searchFilter = function (driver) {
+controller('gamesController', function($scope, nflNewsAPIservice) {
+    //$scope.nameFilter = null;
+    $scope.gamesinProgress = false;
+    /*$scope.searchFilter = function (driver) {
         var re = new RegExp($scope.nameFilter, 'i');
         return !$scope.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName);
-    };
+    };*/
 
-    ergastAPIservice.getDrivers().success(function (response) {
+    nflNewsAPIService.getCurrentScores().success(function(response) {
         //Digging into the response to get the relevant data
-        $scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+        if (response == true) {
+            $scope.gamesInProgress = true;
+        }
     });
-}).
+});
 
 /* Driver controller */
-controller('driverController', function($scope, $routeParams, ergastAPIservice) {
+/*controller('driverController', function($scope, $routeParams, ergastAPIservice) {
     $scope.id = $routeParams.id;
     $scope.races = [];
     $scope.driver = null;
@@ -28,4 +29,4 @@ controller('driverController', function($scope, $routeParams, ergastAPIservice) 
     ergastAPIservice.getDriverRaces($scope.id).success(function (response) {
         $scope.races = response.MRData.RaceTable.Races;
     });
-});
+});*/
